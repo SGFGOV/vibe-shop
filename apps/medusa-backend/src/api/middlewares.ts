@@ -6,19 +6,19 @@ import {
 import {
   PostAdminCreateBrandSchema,
   PostAdminUpdateBrandSchema,
-} from "./admin/brands/validators";
+} from "./admin/custom/brands/validators";
 import {
   PostAdminCreatePostSchema,
   PostAdminUpdatePostSchema,
-} from "./admin/posts/validators";
+} from "./admin/custom/posts/validators";
 import {
   PostAdminCreateThemeSchema,
   PostAdminUpdateThemeSchema,
-} from "./admin/themes/validators";
+} from "./admin/custom/themes/validators";
 import {
   PostAdminCreateCategoryImageSchema,
   PostAdminUpdateCategoryImageSchema,
-} from "./admin/category-images/validators";
+} from "./admin/custom/category-images/validators";
 
 /**
  * API Middleware Configuration
@@ -42,7 +42,7 @@ export default defineMiddlewares({
       matcher: "/admin/brands",
       method: ["POST"],
       middlewares: [
-        validateAndTransformBody(PostAdminCreateBrandSchema),
+        validateAndTransformBody(PostAdminCreateBrandSchema as any),
       ],
     },
     // Validate request body for updating a brand
@@ -50,7 +50,7 @@ export default defineMiddlewares({
       matcher: "/admin/brands/:id",
       method: ["POST"],
       middlewares: [
-        validateAndTransformBody(PostAdminUpdateBrandSchema),
+        validateAndTransformBody(PostAdminUpdateBrandSchema as any),
       ],
     },
     // Protect all admin blog post routes - require admin authentication
@@ -65,7 +65,7 @@ export default defineMiddlewares({
       matcher: "/admin/posts",
       method: ["POST"],
       middlewares: [
-        validateAndTransformBody(PostAdminCreatePostSchema),
+        validateAndTransformBody(PostAdminCreatePostSchema as any),
       ],
     },
     // Validate request body for updating a blog post
@@ -73,7 +73,7 @@ export default defineMiddlewares({
       matcher: "/admin/posts/:id",
       method: ["POST"],
       middlewares: [
-        validateAndTransformBody(PostAdminUpdatePostSchema),
+        validateAndTransformBody(PostAdminUpdatePostSchema as any),
       ],
     },
     // Validate request body for creating a theme
@@ -82,7 +82,7 @@ export default defineMiddlewares({
       matcher: "/admin/themes",
       method: ["POST"],
       middlewares: [
-        validateAndTransformBody(PostAdminCreateThemeSchema),
+        validateAndTransformBody(PostAdminCreateThemeSchema as any),
       ],
     },
     // Validate request body for updating a theme
@@ -90,7 +90,7 @@ export default defineMiddlewares({
       matcher: "/admin/themes/:id",
       method: ["POST"],
       middlewares: [
-        validateAndTransformBody(PostAdminUpdateThemeSchema),
+        validateAndTransformBody(PostAdminUpdateThemeSchema as any),
       ],
     },
     // Store brand routes are public (no authentication required)
@@ -126,7 +126,7 @@ export default defineMiddlewares({
       matcher: "/admin/category-images",
       method: ["POST"],
       middlewares: [
-        validateAndTransformBody(PostAdminCreateCategoryImageSchema),
+        validateAndTransformBody(PostAdminCreateCategoryImageSchema as any),
       ],
     },
     // Validate request body for updating a category image
@@ -134,7 +134,7 @@ export default defineMiddlewares({
       matcher: "/admin/category-images/:id",
       method: ["POST"],
       middlewares: [
-        validateAndTransformBody(PostAdminUpdateCategoryImageSchema),
+        validateAndTransformBody(PostAdminUpdateCategoryImageSchema as any),
       ],
     },
     // Store category-images routes are public (no authentication required)

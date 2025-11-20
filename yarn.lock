@@ -2879,7 +2879,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@medusajs/admin-sdk@npm:^2.11.3":
+"@medusajs/admin-sdk@npm:2.11.3":
   version: 2.11.3
   resolution: "@medusajs/admin-sdk@npm:2.11.3"
   dependencies:
@@ -3047,7 +3047,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@medusajs/cli@npm:^2.11.3":
+"@medusajs/cli@npm:2.11.3":
   version: 2.11.3
   resolution: "@medusajs/cli@npm:2.11.3"
   dependencies:
@@ -3279,7 +3279,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@medusajs/framework@npm:^2.11.3":
+"@medusajs/framework@npm:2.11.3":
   version: 2.11.3
   resolution: "@medusajs/framework@npm:2.11.3"
   dependencies:
@@ -3421,7 +3421,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@medusajs/medusa@npm:^2.11.3":
+"@medusajs/medusa@npm:2.11.3":
   version: 2.11.3
   resolution: "@medusajs/medusa@npm:2.11.3"
   dependencies:
@@ -3691,7 +3691,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@medusajs/test-utils@npm:^2.11.3":
+"@medusajs/test-utils@npm:2.11.3":
   version: 2.11.3
   resolution: "@medusajs/test-utils@npm:2.11.3"
   dependencies:
@@ -9562,7 +9562,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.11.24":
+"@types/node@npm:^20.12.11":
   version: 20.19.25
   resolution: "@types/node@npm:20.19.25"
   dependencies:
@@ -9845,15 +9845,15 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@vibeshop/medusa-backend@workspace:apps/medusa-backend"
   dependencies:
-    "@medusajs/admin-sdk": "npm:^2.11.3"
-    "@medusajs/cli": "npm:^2.11.3"
-    "@medusajs/framework": "npm:^2.11.3"
-    "@medusajs/medusa": "npm:^2.11.3"
-    "@medusajs/test-utils": "npm:^2.11.3"
+    "@medusajs/admin-sdk": "npm:2.11.3"
+    "@medusajs/cli": "npm:2.11.3"
+    "@medusajs/framework": "npm:2.11.3"
+    "@medusajs/medusa": "npm:2.11.3"
+    "@medusajs/test-utils": "npm:2.11.3"
     "@swc/core": "npm:^1.7.28"
     "@swc/jest": "npm:^0.2.36"
     "@types/jest": "npm:^29.5.13"
-    "@types/node": "npm:^20.11.24"
+    "@types/node": "npm:^20.12.11"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:^18.2.25"
     jest: "npm:^29.7.0"
@@ -9861,7 +9861,6 @@ __metadata:
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     ts-node: "npm:^10.9.2"
-    tsconfig-paths: "npm:^4.2.0"
     typescript: "npm:^5.6.2"
     vite: "npm:^5.4.14"
     yalc: "npm:^1.0.0-pre.53"
