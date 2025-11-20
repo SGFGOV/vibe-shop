@@ -12,6 +12,7 @@ import useCategory from "../../dataFetching/useCategory";
 import { useMainContextStore } from "../../provider/MainContextStore";
 import { usePathname, useRouter } from "next/navigation";
 import Skeleton from "react-loading-skeleton";
+import { getCategoryThumbnail, hasCategoryImages } from "@/utils/categoryImages";
 
 const ShoppingBegHoverContent = dynamic(
   () => import("./ShoppingBegHoverContent"),
@@ -234,11 +235,19 @@ const Navbar = () => {
                               className="d-flex align-items-center"
                             >
                               <div className="me-2 avatar-icon">
-                                <img
-                                  src={category.icon}
-                                  alt="vegetables"
-                                  className="w-100 h-100 rounded-circle"
-                                />
+                                {hasCategoryImages(category) ? (
+                                  <img
+                                    src={getCategoryThumbnail(category)}
+                                    alt={category.name}
+                                    className="w-100 h-100 rounded-circle object-cover"
+                                  />
+                                ) : (
+                                  <img
+                                    src={category.icon || "/img/default-category.png"}
+                                    alt={category.name}
+                                    className="w-100 h-100 rounded-circle"
+                                  />
+                                )}
                               </div>
                               <span>{category.name}</span>
                             </Link>

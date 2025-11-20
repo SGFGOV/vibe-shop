@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 import { Category as CategoryType, Product } from "@/types";
+import { getCategoryThumbnail, hasCategoryImages } from "@/utils/categoryImages";
 
 interface CategoryProps {
   categorys?: CategoryType[];
@@ -41,11 +43,22 @@ const Category = ({ categorys, products }: CategoryProps) => {
                     }`}
                   >
                     <div className="animated-icon d-inline-flex align-items-center justify-content-center rounded-circle position-relative">
-                      <img
-                        src={category.icon}
-                        alt={category.name}
-                        className="img-fluid"
-                      />
+                      {hasCategoryImages(category) ? (
+                        <Image
+                          src={getCategoryThumbnail(category)}
+                          alt={category.name}
+                          width={64}
+                          height={64}
+                          className="img-fluid rounded-circle object-cover"
+                          style={{ width: "64px", height: "64px" }}
+                        />
+                      ) : (
+                        <img
+                          src={category.icon || "/img/default-category.png"}
+                          alt={category.name}
+                          className="img-fluid"
+                        />
+                      )}
                     </div>
                     <Link
                       href={`/products/category=${category.name

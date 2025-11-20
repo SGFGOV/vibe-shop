@@ -6,7 +6,7 @@
  */
 
 import type { StoreProduct, StoreProductCategory, StoreCart, StoreCustomer } from "@medusajs/types";
-import type { Product, Category, User } from "./index";
+import type { Product, Category, CategoryImage, User } from "@/types";
 import type { Cart } from "../hooks/useMedusaCart";
 
 /**
@@ -63,21 +63,30 @@ export type CustomCategory = Category;
 
 /**
  * Convert Medusa StoreProductCategory to custom Category format
+ * Note: Category images should be fetched separately and passed via the category controller
  */
-export function medusaCategoryToCategory(medusaCategory: StoreProductCategory): Category {
+export function medusaCategoryToCategory(
+  medusaCategory: StoreProductCategory,
+  images: CategoryImage[] = []
+): Category {
+  // Get thumbnail image (prefer thumbnail type, fallback to first image)
+  const thumbnailImage = images.find((img) => img.type === "thumbnail") || images[0];
+  const imageUrl = thumbnailImage?.url || "";
+  
   return {
     id: medusaCategory.id,
     name: medusaCategory.name || "",
     slug: medusaCategory.handle || "",
     description: medusaCategory.description || "",
-    image: medusaCategory.category_children?.[0]?.metadata?.thumbnail  as string || "",
+    image: imageUrl,
+    ...(images.length > 0 && { images }),
     status: "show", // Medusa categories are typically active
     children: medusaCategory.category_children?.map((child) => ({
       id: child.id,
       name: child.name || "",
       slug: child.handle || "",
     })),
-  };
+  } as Category;
 }
 
 // Cart compatibility

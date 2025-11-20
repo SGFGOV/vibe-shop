@@ -55,6 +55,15 @@ export interface Brand {
   updatedAt?: Date;
 }
 
+// Category Image Types
+export interface CategoryImage {
+  id: string;
+  url: string;
+  file_id?: string;
+  type: "thumbnail" | "image";
+  category_id: string;
+}
+
 // Category Types
 export interface Category {
   theme?: string[];
@@ -65,6 +74,7 @@ export interface Category {
   description?: string;
   icon?: string;
   image?: string;
+  images?: CategoryImage[];
   colorClass?: string;
   status?: "show" | "hide";
   parent?: string;

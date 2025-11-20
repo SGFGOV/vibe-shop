@@ -23,6 +23,9 @@ export default defineConfig({
     {
       resolve: "./src/modules/theme",
     },
+    {
+      resolve: "./src/modules/product-media",
+    },
     // File Module with local file provider
     {
       resolve: "@medusajs/medusa/file",

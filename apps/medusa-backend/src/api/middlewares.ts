@@ -15,6 +15,10 @@ import {
   PostAdminCreateThemeSchema,
   PostAdminUpdateThemeSchema,
 } from "./admin/themes/validators";
+import {
+  PostAdminCreateCategoryImageSchema,
+  PostAdminUpdateCategoryImageSchema,
+} from "./admin/category-images/validators";
 
 /**
  * API Middleware Configuration
@@ -110,6 +114,31 @@ export default defineMiddlewares({
     // Allow theme field in category API routes
     // Note: This is handled by custom category routes that include themes
     // The built-in category routes don't need this middleware
+    // Protect all admin category-images routes - require admin authentication
+    {
+      matcher: "/admin/category-images*",
+      middlewares: [
+        authenticate("user", ["session", "bearer", "api-key"]),
+      ],
+    },
+    // Validate request body for creating a category image
+    {
+      matcher: "/admin/category-images",
+      method: ["POST"],
+      middlewares: [
+        validateAndTransformBody(PostAdminCreateCategoryImageSchema),
+      ],
+    },
+    // Validate request body for updating a category image
+    {
+      matcher: "/admin/category-images/:id",
+      method: ["POST"],
+      middlewares: [
+        validateAndTransformBody(PostAdminUpdateCategoryImageSchema),
+      ],
+    },
+    // Store category-images routes are public (no authentication required)
+    // GET /store/category-images returns category images for the storefront
   ],
 });
 
