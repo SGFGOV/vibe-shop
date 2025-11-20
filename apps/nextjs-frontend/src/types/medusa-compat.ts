@@ -6,8 +6,17 @@
  */
 
 import type { StoreProduct, StoreProductCategory, StoreCart, StoreCustomer } from "@medusajs/types";
-import type { Product, Category, CategoryImage, User } from "@/types";
+import type { Product, Category, User } from "./index";
 import type { Cart } from "../hooks/useMedusaCart";
+
+// Re-export CategoryImage type to avoid import resolution issues
+type CategoryImage = {
+  id: string;
+  url: string;
+  file_id?: string;
+  type: "thumbnail" | "image";
+  category_id: string;
+};
 
 /**
  * Type guards and compatibility helpers

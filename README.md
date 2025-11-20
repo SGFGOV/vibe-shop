@@ -1,9 +1,7 @@
 # vibe-shop
 A custom shop built in hours instead of days that it normally takes
 
-# GroStore Monorepo
-
-Monorepo for GroStore e-commerce platform using Turbo.
+Monorepo for vibe-shop e-commerce platform using Turbo.
 
 ## Structure
 
