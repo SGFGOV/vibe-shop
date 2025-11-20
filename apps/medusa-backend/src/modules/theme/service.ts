@@ -1,4 +1,4 @@
-import { MedusaService } from "@medusajs/utils"
+import { MedusaService } from "@medusajs/framework/utils"
 import { Theme } from "./models/theme"
 
 class ThemeModuleService extends MedusaService({

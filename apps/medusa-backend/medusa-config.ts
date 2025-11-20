@@ -1,18 +1,18 @@
-import { defineConfig } from "@medusajs/utils";
-import { BRAND_MODULE } from "./src/modules/brand"
+import { loadEnv, defineConfig } from '@medusajs/framework/utils'
 
-export default defineConfig({
+loadEnv(process.env.NODE_ENV || 'development', process.cwd())
+
+module.exports = defineConfig({
   projectConfig: {
-    http:{
-      storeCors: process.env.STORE_CORS || "http://localhost:3000",
-      adminCors: process.env.ADMIN_CORS || "http://localhost:7001",
-      authCors: process.env.AUTH_CORS || "http://localhost:3000,http://localhost:7001",
+    databaseUrl: process.env.DATABASE_URL,
+    http: {
+      storeCors: process.env.STORE_CORS!,
+      adminCors: process.env.ADMIN_CORS!,
+      authCors: process.env.AUTH_CORS!,
       jwtSecret: process.env.JWT_SECRET || "supersecret",
       cookieSecret: process.env.COOKIE_SECRET || "supersecret",
-      
-    },
-    databaseUrl: process.env.DATABASE_URL || "postgresql://localhost:5432/medusa_db",
-      redisUrl: process.env.REDIS_URL || "redis://localhost:6379"},
+    }
+  },
   modules: [
     {
       resolve: "./src/modules/brand",
@@ -93,4 +93,3 @@ export default defineConfig({
     },
   ],
 })
-
