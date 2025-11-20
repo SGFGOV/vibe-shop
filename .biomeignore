@@ -1,0 +1,56 @@
+# Biome ignore file
+# Files and directories to ignore during linting and formatting
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+.next/
+.medusa/
+.turbo/
+
+# Generated files
+*.min.js
+*.min.css
+*.bundle.js
+
+# Lock files
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
+# Static assets
+public/
+assets/
+documentation/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# Coverage
+coverage/
+.nyc_output/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+

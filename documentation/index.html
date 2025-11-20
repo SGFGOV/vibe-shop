@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Fav Icon  -->
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <title>Grostore Next Js eCommerce Solution</title>
+
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    
+
+<div class="body-wrapper">
+      <!-- nav area -->
+      <div class="nav-wrapper">
+        <div class="logo-wrapper">
+          <h1 class="logo-title">
+            Grostore Next Js eCommerce Solution
+    
+          </h1>
+        </div>
+        <div class="nav" id="nav">
+          <div class="nav-item active">
+            <a class="main-nav-item"><i class="fas fa-cog"></i>Getting Started</a>
+            <div class="sub-nav">
+              <a class="sub-nav-item active" href="#introduction">Introduction</a>
+
+              <a class="sub-nav-item" href="#admin-configuration">Configuration</a>
+              <a class="sub-nav-item" href="#install-on-local-server">Run on local server</a>
+
+              <a class="sub-nav-item" href="#install-on-server">Run on live Server</a>
+            </div>
+          </div>
+
+          <div class="nav-item">
+            <a class="main-nav-item"><i class="fas fa-question"></i>Features and How to use?</a>
+            <div class="sub-nav">
+              <a class="sub-nav-item" href="#product">Product CRUD</a>
+              <a class="sub-nav-item" href="#category">Category CRUD</a>
+              <a class="sub-nav-item" href="#attribute">Attributes CRUD</a>
+              <a class="sub-nav-item" href="#coupon">Coupon CRUD</a>
+              <a class="sub-nav-item" href="#brand">Brands</a>
+              <a class="sub-nav-item" href="#blog">Blogs</a>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- content area -->
+      <div class="content-wrapper" id="content">
+        <!-- navbar -->
+        <!-- <div class="need-support">
+          <a href="https://grostore-documantation.netlify.app/" target="_blank"><i class="fa fa-bullseye"></i>Live documentation</a>
+
+          <a href="https://grostore-nextjs.vercel.app//" target="_blank"><i class="fa fa-bullseye"></i>View demo</a>
+          <a href="https://themeforest.net/user/themetags/portfolio" target="_blank"><i class="fa fa-cloud-download"></i>Buy theme</a>
+       
+        </div> -->
+
+        <!-- Getting start -->
+        <div class="content-section" id="introduction" style="display: block">
+          <h3>Introduction</h3>
+
+          Thank you very much for choosing our application. We truly appreciate
+          and really hope that you'll enjoy our script! <br>
+          <strong>If you like this script, Please support us by rating us 5 stars (<a href="https://themeforest.net/user/themetags/portfolio" target="_blank">Rate us Here</a>)</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br><br>
+          <p><strong>Grostore</strong> - React Next Js eCommerce Solution</p>
+
+          <h3>Used Technologies</h3>
+          <ul>
+            
+            <li>Next.js app router</li>
+            <li>Tailwindcss</li>
+            <li>Bootstrap</li>
+            <li>Node.js (Express.js)</li>
+            <li>MongoDB (Mongoose)</li>
+          </ul>
+
+          <h3>User Panels</h3>
+          <ul>
+            <li>Admin Panel</li>
+            <li>Store Frontend</li>
+          </ul>
+
+          <h3>Core Features</h3>
+          This is a complete eCommerce template built with React, Next.js and
+          Tailwindcss with Rest API integration. This template is backend ready
+          and it's built with node, express, and uses MongoDB for the database.
+          We did all schema validation for saving data.
+          <h6>Here is some core feature of this project</h6>
+          <ul>
+            <li>Complete Full-Stack Project with backend integration.</li>
+            <li>Dynamic translation on all dynamic data.</li>
+            <li>Product Attributes and Combination.</li>
+            <li>Staff CRUD(Create, Read, Delete, Update).</li>
+            <li>Product CRUD(Create, Read, Delete, Update).</li>
+            <li>Category CRUD(Create, Read, Delete, Update).</li>
+            <li>Coupon CRUD(Create, Read, Delete, Update).</li>
+            <li>Setting for controlling admin and store.</li>
+            <li>Controlling customer orders.</li>
+          </ul>
+
+          <h5>Need Support?</h5>
+          If you have any questions about the script, please sent a email to us
+          <strong> support@themetags.com</strong>
+        </div>
+        <div class="content-section" id="admin-configuration">
+          <h3>Installation</h3>
+          <div class="content">
+            <section class="callout-yellow">
+              <p>
+                As you already installed <strong>Node</strong> on you machine,
+                so no need to re-install again, Just check you installed
+                properly by <strong>node --version</strong>
+              </p>
+              <code></code>
+            </section>
+            <h6>NPM Packages:</h6>
+            <ul>
+              <li>After downloading the template, unzip it</li>
+              <li>Open the VS Code Terminal/System Terminal</li>
+              <li>
+                Go to the folder (admin):
+                <strong>(cd path/to/template)</strong>
+              </li>
+              <li>
+                Run: <strong>npm install</strong>, it will install all used
+                packages for this admin.
+              </li>
+              <li>Make sure that there is no error.</li>
+            </ul>
+
+            <ol>
+              <li>
+                Rename <code class="env">.env.example</code> to
+                <code class="env">.env.local</code>
+              </li>
+              <li>
+                Please watch this video for Cloudinary configuration
+                <a href="https://www.youtube.com/watch?v=gmvYb4z8LK0&amp;ab_channel=alexcodetuts" target="_blank" rel="noopener noreferrer">Cloudinary configuration</a>,
+                <a href="http://https://priyal-babel.medium.com/upload-and-delete-images-with-a-react-app-using-cloudinary-api-32565d11d760" target="_blank" rel="noopener noreferrer">doc</a>
+                (We used Cloudinary for profile image upload). <br>
+                <p>Get your cloud_name,api_key and api_secret</p>
+                <img src="./images/cloudinary-name.png" alt="cloudinary-name">
+                <br>
+                <p>Get your upload preset</p>
+                <img src="./images/cloudinary-preset.png" alt="cloudinary-preset">
+              </li>
+            </ol>
+            <div>
+              <h6>
+                After configuration you <strong>.env.local</strong> file will
+                look like this
+              </h6>
+              <pre style="position: relative;">                    <code>
+       MONGODB_URI=your mongodb uri
+       NEXT_PUBLIC_BASE_URL=http://localhost:3000
+       NEXT_PUBLIC_CLOUDINARY_API_KEY=your cloudinary api key
+       NEXT_PUBLIC_CLOUDINARY_API_SECRET=your cloudinary secret key
+       NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET=your cloudinary upload preset
+       NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your cloudinary name
+       NEXT_PUBLIC_CLOUDINARY_URL=your cloudinary url
+       NEXTAUTH_SECRET=123456789
+       GMAIL_USER=your gmail
+       GMAIL_PASSWORD=your gamil app password
+
+                        
+  
+                    </code>
+                       <div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+
+              <h6>Running the grostore</h6>
+              <h6>Importing Demo Data</h6>
+              <p>
+                Once you successfully connect with MongoDB and configure the
+                <strong>.env</strong> file, run
+                <code class="env">  http://localhost:3000/api/v1/seed </code> then  import all demo
+                data into the database. Make sure to change the demo data in the
+                utils folder according to your needs. 
+              </p>
+              
+            </div>
+          </div>
+        </div>
+   
+   <!-- installation -->
+   <div class="content-section" id="install-on-server">
+    <h3>Run On Live server</h3>
+    <p>
+      As a <strong>next.js</strong> project vercel is recommended for
+      deployment because If you deploy on vercel then it will
+      automatically do everything for us and there will be no need for
+      customization.
+    </p>
+    <p>
+      Here is simple guide for deploying backend, store and admin on
+      vercel:
+    </p>
+
+    <ul>
+      <li>
+        Create a
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+        account, go to
+        <a href="https://vercel.com/dashboard" target="_blank" rel="noopener noreferrer">Vercel</a>
+        and sign up with that GitHub account.
+      </li>
+
+      <li class="ml-4">
+        Create three private repositories on GitHub, then push 
+      </li>
+
+      
+      <li>
+        When you import your GitHub repository on vercel by creating a
+        project, you will see an option for Environment Variables, just
+        click on that and give you a <strong>.env</strong> all
+        variable with the value. then click on deploy. <br>
+        <strong>Note first you will need to import and deploy , so that
+          you can use that  live url as store 
+          (NEXT_PUBLIC_BASE_URL)
+
+          .</strong>
+        
+      </li>
+      <img src="./images/env_variable.png" alt="env_variable">
+      <li class="text-danger">
+        After the  deployed successfully, you will find a URL
+        for your API route that will like this
+        <strong>https://grostore-nextjs.vercel.app/</strong>, and now change
+        that like this <strong>https://grostore-nextjs.vercel.app/v1/api</strong>,
+        or <strong>https://grostore-nextjs.vercel.app/v1/products</strong>, to
+        see the products imported or not and use this as a
+        <strong>NEXT_PUBLIC_BASE_URL</strong> 
+      </li>
+    
+      <br>
+      <li>
+        If you do accordingly, then everything will be okay, for now when
+        you make any changes on your local file, you just need to push
+        your code on GitHub, vercel will automatically detect those
+        changes and will redeploy your project with updated features.
+      </li>
+    </ul>
+    <p>
+      You will find many videos on youtube and also articles on google
+      about how to deploy next.js and express apps on vercel.
+    </p>
+  </div>
+
+
+        <div class="content-section" id="install-on-local-server">
+          <h3>Run On Local server</h3>
+          <br>
+            To run on local server,
+          
+           
+            <br>
+            properly configuration open the root folder on
+            <strong>VS code</strong> or any other code editor. split the
+            <strong>Terminal</strong>  run npm install for nessecery package.
+            <br>
+            And finally run <strong>npm run dev</strong> for
+          <strong>admin</strong> and
+            <strong>store</strong>. 
+        <br>
+            store will <strong>http://localhost:3000/</strong>, <br>
+            and admin <strong>http://localhost:3000/admin</strong>
+          <p></p>
+        </div>
+
+    
+       
+
+    
+
+      
+
+
+        <!-- localizations -->
+        <div class="content-section" id="product">
+          <h3>Product CRUD (Create, Read, Update, Delete)</h3>
+          <p>
+            You can add with and without Combination product from here with all
+            necessary information.
+            need.
+          </p>
+          <ul>
+            <li>
+              <strong>Login to the system as Admin</strong>
+            </li>
+
+            <li>
+              <strong>Go to Catalog tab &gt; Product</strong>
+            </li>
+            <li>
+              <strong>Open the drawer by clicking add product button</strong>
+            </li>
+            <li>
+              <strong>Then fill the information and save</strong>
+            </li>
+            <li>
+              <strong>To Edit Product click on Edit Icon</strong>
+            </li>
+            <li>
+              <strong>To Delete Product click on Delete Icon</strong>
+            </li>
+           
+          </ul>
+          <br>
+          <img src="./images/product.png" alt="">
+        </div>
+        <div class="content-section" id="category">
+          <h3>Categories CRUD (Create, Read, Update, Delete)</h3>
+          <p>
+            You can add  from here with all
+            necessary information
+            need.
+          </p>
+          <ul>
+            <li>
+              <strong>Login to the system as Admin</strong>
+            </li>
+
+            <li>
+              <strong>Go to Catalog tab &gt; Categories</strong>
+            </li>
+            <li>
+              <strong>Open the drawer by clicking add category button</strong>
+            </li>
+            <li>
+              <strong>Then fill the information and save</strong>
+            </li>
+            <li>
+              <strong>To Edit category click on Edit Icon</strong>
+            </li>
+            <li>
+              <strong>To Delete cateogory click on Delete Icon</strong>
+            </li>
+           
+          </ul>
+          <br>
+          <img src="./images/category.png" alt="">
+        </div>
+        <div class="content-section" id="attribute">
+          <h3>Attribute CRUD (Create, Read, Update, Delete)</h3>
+          <p>
+            You can add  from here with all
+            necessary information.
+            need.
+          </p>
+          <ul>
+            <li>
+              <strong>Login to the system as Admin</strong>
+            </li>
+
+            <li>
+              <strong>Go to Catalog tab &gt; Attribute</strong>
+            </li>
+            <li>
+              <strong>Open the drawer by clicking add attribute button</strong>
+            </li>
+            <li>
+              <strong>Then fill the information and save</strong>
+            </li>
+            <li>
+              <strong>To Edit attribute click on Edit Icon</strong>
+            </li>
+            <li>
+              <strong>To Delete attribute click on Delete Icon</strong>
+            </li>
+           
+          </ul>
+          <br>
+          <img src="./images/attribute.png" alt="">
+        </div>
+        <div class="content-section" id="coupon">
+          <h3>Coupon CRUD (Create, Read, Update, Delete)</h3>
+          <p>
+            You can add  from here with all
+            necessary information.
+            need.
+          </p>
+          <ul>
+            <li>
+              <strong>Login to the system as Admin</strong>
+            </li>
+
+            <li>
+              <strong>Go to Catalog tab &gt; Coupon</strong>
+            </li>
+            <li>
+              <strong>Open the drawer by clicking add Coupon button</strong>
+            </li>
+            <li>
+              <strong>Then fill the information and save</strong>
+            </li>
+            <li>
+              <strong>To Edit Product click on Edit Icon</strong>
+            </li>
+            <li>
+              <strong>To Delete Coupon click on Delete Icon</strong>
+            </li>
+           
+          </ul>
+          <br>
+          <img src="./images/coupon.png" alt="">
+        </div>
+
+        <div class="content-section" id="brand">
+          <h3>Brand CRUD (Create, Read, Update, Delete)</h3>
+          <p>
+            You can add  from here with all
+            necessary information.
+            need.
+          </p>
+          <ul>
+            <li>
+              <strong>Login to the system as Admin</strong>
+            </li>
+
+            <li>
+              <strong>Go to Catalog tab &gt; Brand</strong>
+            </li>
+            <li>
+              <strong>Open the drawer by clicking add brand button</strong>
+            </li>
+            <li>
+              <strong>Then fill the information and save</strong>
+            </li>
+            <li>
+              <strong>To Edit Brand click on Edit Icon</strong>
+            </li>
+            <li>
+              <strong>To Delete Brand click on Delete Icon</strong>
+            </li>
+           
+          </ul>
+          <br>
+          <img src="./images/brand.png" alt="">
+        </div>
+
+        <div class="content-section" id="blog">
+          <h3>Blogs CRUD (Create, Read, Update, Delete)</h3>
+          <p>
+            You can add  from here with all
+            necessary information.
+            need.
+          </p>
+          <ul>
+            <li>
+              <strong>Login to the system as Admin</strong>
+            </li>
+
+            <li>
+              <strong>Go to  Brand</strong>
+            </li>
+            <li>
+              <strong>Open the drawer by clicking add Brand button</strong>
+            </li>
+            <li>
+              <strong>Then fill the information and save</strong>
+            </li>
+            <li>
+              <strong>To Edit Brand click on Edit Icon</strong>
+            </li>
+            <li>
+              <strong>To Delete Brand click on Delete Icon</strong>
+            </li>
+           
+          </ul>
+          <br>
+          <img src="./images/blog.png" alt="">
+        </div>
+
+        <div class="content-section" id="view_store">
+          <h3>To View store click on Online Store button on sidebar.</h3>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+  </body>
+</html>
